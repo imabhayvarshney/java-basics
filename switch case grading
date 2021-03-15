@@ -1,0 +1,66 @@
+package Switch;
+import java.util.*;
+
+public class Switchcase
+{
+	public static void main(String[] args) 
+	{
+    	Scanner sc=new Scanner(System.in);
+    	while(true)
+    	{
+    	System.out.println("Enter your grade");
+    	String ch=sc.nextLine();
+    	
+    	switch(ch)
+    	{
+    	case "A":
+    		System.out.println("Excellent");
+    		System.out.print("Enter your score 0 or 1");
+        	int r=sc.nextInt(); 
+    		switch(r) 
+    		{
+    		case 0:
+    			System.out.println("Interview not cleared");
+    			break;
+    		case 1:
+    			System.out.println("Clear");	
+    			break;
+    		default:
+        		System.out.println("Wrong Choice");
+    	    }
+    		
+    		break;
+    	case "B":
+    		System.out.println("Good");
+    		System.out.print("Enter your score 0 or 1");
+        	int k=sc.nextInt(); 
+    		switch(k) 
+    		{
+    		case 0:
+    			System.out.println("Interview not cleared");
+    			break;
+    		case 1:
+    			System.out.println("Clear");	
+    			break;
+    		default:
+        		System.out.println("Wrong Choice");
+    		
+    		}
+    		break;
+    	case "C":
+    		System.out.println("Average");
+    		break;
+    	case "D":
+    		System.out.println("Excellent");
+    		break;
+    	case "F":
+    		System.out.println("Excellent");
+    		break;
+    	default:
+    		System.out.println("Wrong Choice");
+    	} 	
+      }
+
+    }
+
+}
