@@ -1,0 +1,41 @@
+package array;
+import java.util.*;
+public class Array 
+{
+	public static void main(String[] args)
+	{
+		
+	Scanner sc=new Scanner(System.in);
+	int n,i,sea,output;
+	System.out.print("Enter the value of n:");
+	n=sc.nextInt();
+	int []Arr=new int[n];
+	System.out.print("Enter the value of Array:");
+	for(i=0;i<n;i++)
+	{
+		Arr[i]=sc.nextInt();
+	}
+	System.out.print("Enter the Element to be Searched:");
+	sea=sc.nextInt();
+	lin nf=new lin();
+	nf.searchvalue(Arr,sea);
+	
+	}
+	
+}
+
+class lin
+{
+	void searchvalue(int [] Arr, int sea)
+	{
+	 int i,temp;
+	for(i=0;i<Arr.length;i++)
+		{
+		
+		if(Arr[i]==sea)
+			System.out.print("Element at index:"+i);
+		}
+		if(i==Arr.length-1)
+			System.out.print("Element not Found!!");
+	}
+}
