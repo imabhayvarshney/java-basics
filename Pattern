@@ -1,0 +1,40 @@
+package Del;
+import java.util.*;
+public class del 
+{
+
+	public static void main(String[] args) 
+	{
+	    int i,j,s1,k;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter the vale of S1:");
+		s1=sc.nextInt();
+		int[][] twod=new int[s1][];
+		for(k=0;k<s1;k++)
+        {
+            twod[k]=new int[k+1];
+        }
+		int count =1;
+   
+		for(i=0;i<s1;i++)
+		{
+			for(j=0;j<i;j++)
+			{
+				twod[i][j]=count;
+				count++;
+			} 	
+		}
+		
+		for(i=0;i<s1;i++)
+		{
+			for(j=0;j<i;j++)
+			{
+				System.out.print(twod[i][j]+" ");
+			}System.out.print("\n");
+		}
+		
+    }
+}
+
+
+
