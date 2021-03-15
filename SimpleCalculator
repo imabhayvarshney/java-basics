@@ -1,0 +1,86 @@
+package calc;
+import java.util.*;
+public class calcu 
+{
+	static double d;
+	public static void main(String[] args)
+	{
+		OperationClass operationObject = new OperationClass();
+		Scanner input = new Scanner(System.in);
+		double a,b;
+		
+		int userChoice;
+		System.out.print("Please Enter The First Number: ");
+		a = input.nextDouble();
+		System.out.print("Please Enter The Second Number: ");
+		b = input.nextDouble();
+		System.out.println("Please Select Operation to Perform:");
+		System.out.println("1-Addition(+)");
+		System.out.println("2-Subtraction(-)");
+		System.out.println("3-Division(/)");
+		System.out.println("4-Multiplication(*)");
+		System.out.print("Enter your choice:");
+		userChoice = input.nextInt();
+
+		switch (userChoice)
+		{
+		case 1:
+			
+			d=operationObject.addition(a,b);
+			System.out.print("The addition of" + a+  " and"  +b +  "is" +d);
+			break;
+		case 2:
+			
+			d=operationObject.subtraction(a,b);
+			System.out.print("The subtraction of " + a+  " and"  +b +  "is"  +d);
+			break;
+		case 3:
+			d=operationObject.division(a,b);
+			System.out.print("The division of " + a+  " and "  +b +  "is"  +d);
+			break;
+		case 4:
+			d=operationObject.multiplication(a,b);
+			System.out.print("The multiplication of "  + a+  "  and "   +b +  "is"  +d);
+			break;
+		}
+
+	}
+}
+
+class OperationClass
+{
+
+	double fnum, snum, answer;
+
+	double addition(double fnum,double snum)
+	{
+		answer = fnum + snum;
+		return answer;
+	}
+
+	double subtraction(double fnum,double snum)
+	{
+		answer = fnum - snum;
+		return answer;
+	}
+
+	double division(double fnum,double snum)
+	{
+		if(snum==0)
+		{
+			System.out.print("Error or division error...");
+			   System.exit(0);
+		}
+		answer = fnum / snum;
+		return answer;
+	}
+
+	double multiplication(double fnum,double snum)
+	{
+		answer = fnum * snum;
+		return answer;
+	}
+}
+
+
+
